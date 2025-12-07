@@ -114,7 +114,7 @@ public class CaiMoGuHelp {
                 .url("https://www.caimogu.cc/game/act/score") // 测试API，可替换为实际接口
                 .post(formBody)
                 .addHeader("Host","www.caimogu.cc")
-                .addHeader("Cookie","CAIMOGU="+caiMoGuToken)
+                .addHeader("Cookie","CAIMOGU="+caiMoGuToken+";")
                 .build();
         try (Response response = client.newCall(request).execute()) {
             if (response.isSuccessful()) {
